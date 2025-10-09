@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineer's Test Site</title>
+    <link rel="icon" href="data:,">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            min-height: 100vh;
+            background-color: #0d1117;
+            /* background-image: url('https://www.transparenttextures.com/patterns/cubes.png'); */ /* Removed cube texture */
+            font-family: 'Poppins', Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: inset 0 0 100px rgba(0,0,0,0.8);
+            position: relative;
+            overflow: hidden;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0;
+            width: 100vw; height: 100vh;
+            z-index: -2;
+            background-image: url('https://images.pexels.com/photos/176851/pexels-photo-176851.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: 0% 0%;
+            animation: panImage 60s linear infinite alternate;
+            transition: transform 0.3s cubic-bezier(.4,1.4,.6,1);
+        }
+        @keyframes panImage {
+            0% { background-position: 0% 0%; }
+            100% { background-position: 100% 100%; }
+        }
+        .container {
+            background: rgba(13, 17, 23, 0.85);
+            border-radius: 18px;
+            padding: 2.5rem 2rem;
+            box-shadow: 0 8px 32px 0 rgba(0,0,0,0.45);
+            max-width: 420px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            font-family: 'Oswald', Arial, sans-serif;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: #FFC300;
+            text-shadow: 2px 2px 8px #222, 0 0 4px #FFC30088;
+            font-size: 2.3em;
+            letter-spacing: 0.06em;
+            margin-bottom: 1.1em;
+            opacity: 0;
+            animation: stampEffect 1.5s cubic-bezier(0.25, 1.5, 0.5, 1) forwards;
+            position: relative;
+            z-index: 2;
+        }
+        @keyframes stampEffect {
+            0% { opacity: 0; transform: scale(1.5);}
+            20% { opacity: 1; transform: scale(0.9);}
+            60% { opacity: 1; transform: scale(1.08);}
+            80% { opacity: 1; transform: scale(0.97);}
+            100% { opacity: 1; transform: scale(1);}
+        }
+        p {
+            color: #EAEAEA;
+            font-size: 1.08em;
+            margin: 0;
+            line-height: 1.6;
+            font-weight: 400;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>CLASSIFIED: TEST SITE 01</h1>
+        <p>This digital space serves as a non-commercial training ground for web development experiments. All systems operational. Proceed with caution.</p>
+    </div>
+</body>
+</html>
